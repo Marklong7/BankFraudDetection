@@ -1,6 +1,6 @@
 # BankFraudDetection
 
-## Key words:
+## Key Words:
 Fraud Detection, Privacy Preserving Machine Learning, Federated Learning, Fairness/bia Analysis.
 
 ## Authors:
