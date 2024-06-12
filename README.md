@@ -4,7 +4,7 @@
 Fraud Detection, Privacy Preserving Machine Learning, Federated Learning, Fairness/bia Analysis.
 
 ## Authors:
-Jialong (Mark) Li, Zhitao Zeng。
+Jialong (Mark) Li, Zhitao Zeng.
 
 ## The Dataset: Bank Account Fraud (BAF)
 The Dataset was released by Jesus et al. [1] at NeurIPS 2022. BAF is a large-scal, privacy-preserving, and realistic suite of tabular datasets. By involving 1M observations, 30 features (with noised sensitive attribute e.g. age group and employment status)
