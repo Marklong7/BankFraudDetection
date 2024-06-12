@@ -11,10 +11,9 @@ The **Bank Account Fraud (BAF) dataset**, released by Jesus et al. [1] at **Neur
 
 Derived from a major consumer bank, the BAF dataset was used to detect fraudulent online bank account applications. In this scenario, fraudsters attempt to access banking services with fake information, then quickly max out credit lines or use the accounts to receive illicit payments.
 
-* Performance Metric:
+### Performance Metric:
 We select the threshold in order to obtain 5% false positive rate (FPR), and measure the true positive rate (TPR) at that point.
-
-* Fairness Metric:
+### Fairness Metric:
 We measure the ratio between FPRs, i.e., predictive equality [2]. The ratio is calculated by dividing the FPR of the group with lowest observed FPR with the FPR of the group with the highest FPR.
 
 ## Reference:
