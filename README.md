@@ -1,7 +1,7 @@
 # BankFraudDetection
 
 ## Key words:
-Fraud Detection, Privacy Preserving Machine Learning, Fairness/bia, 
+Fraud Detection, Privacy Preserving Machine Learning, Federated Learning, Fairness/bia Analysis.
 
 ## Authors:
 Jialong (Mark) Li, Zhitao Zeng。
