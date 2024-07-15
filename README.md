@@ -29,4 +29,4 @@ Furthermore, we conducted in-depth analyses focusing on feature importance and c
 
 > [2] Corbett-Davies, Sam, et al. "Algorithmic decision making and the cost of fairness." Proceedings of the 23rd acm sigkdd international conference on knowledge discovery and data mining. 2017.
 
-> [3] Pombal, J., Cruz, A. F., Bravo, J., Saleiro, P., Figueiredo, M. A., & Bizarro, P. (2022). Understanding Unfairness in Fraud Detection through Model and Data Bias Interactions. KDD Workshop on Machine Learning in Finance, August 14–18, 2022, Washington DC
+> [3] Pombal, J., et al. Understanding Unfairness in Fraud Detection through Model and Data Bias Interactions. KDD Workshop on Machine Learning in Finance, August 14–18, 2022, Washington DC
