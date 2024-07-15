@@ -10,9 +10,16 @@ Derived from a major consumer bank, the BAF dataset was used to detect fraudulen
 
 ### Performance Metric:
 We select the threshold in order to obtain 5% false positive rate (FPR), and measure the true positive rate (TPR) at that point.
+
 ### Fairness Metric:
 We measure the ratio between FPRs, i.e., predictive equality [2]. The ratio is calculated by dividing the FPR of the group with lowest observed FPR with the FPR of the group with the highest FPR.
 
+## Experiment & Models:
+Building on the framework established by the KDD paper [3], which utilized Logistic Regression (LR), XGBoost (XGB), LightGBM (LGBM), Random Forest (RF), and Feed Forward Neural Network (MLP), we excluded Decision Tree (as it usually perform poorly) and incorporated more advanced deep learning models.
+
+Additionally, we advanced beyond their research by implementing statistical techniques such as normalization, transformation, resampling, and causal inference. These methodologies have significantly enhanced both model performance and fairness, as evidenced in our comprehensive report [report-benchmark].
+
+Furthermore, we conducted in-depth analyses focusing on feature importance and causal inference, yielding interpretable machine learning insights. For more details, refer to [report-insight].
 
 ## Contributors:
 *Jialong (Mark) Li, Zhitao Zeng, Shuting (Shannon) Fang, Yuhong Shao*
