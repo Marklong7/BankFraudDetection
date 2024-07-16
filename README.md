@@ -32,3 +32,6 @@ Finally, we trained federated learning versions of these models. In our previous
 > [2] Corbett-Davies, Sam, et al. "Algorithmic decision making and the cost of fairness." Proceedings of the 23rd acm sigkdd international conference on knowledge discovery and data mining. 2017.
 
 > [3] Pombal, J., et al. Understanding Unfairness in Fraud Detection through Model and Data Bias Interactions. KDD Workshop on Machine Learning in Finance, August 14–18, 2022, Washington DC
+
+> [4] Du, Z., et al. (2022, December). Rethinking normalization methods in federated learning. In Proceedings of the 3rd International Workshop on Distributed Machine Learning (pp. 16-22).
+
