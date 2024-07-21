@@ -26,6 +26,9 @@ Finally, we trained federated learning versions of these models. In our previous
 ## Contributors:
 *Jialong (Mark) Li, Zhitao Zeng, Shuting (Shannon) Fang, Yuhong Shao*
 
+## Acknowledgement:
+Illinois Risk Lab.
+
 ## Reference:
 > [1] Jesus, Sérgio, et al. "Turning the tables: Biased, imbalanced, dynamic tabular datasets for ml evaluation." Advances in Neural Information Processing Systems 35 (2022): 33563-33575.
 
