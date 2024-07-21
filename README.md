@@ -17,7 +17,7 @@ We measure the ratio between FPRs, i.e., predictive equality [2]. The ratio is c
 ## Experiment & Models:
 Building on the framework established by the KDD paper [3], which utilized Logistic Regression (LR), XGBoost (XGB), Random Forest (RF), and Feed Forward Neural Network (MLP), we excluded Decision Tree (as it usually perform poorly) and incorporated more advanced deep learning models.
 
-Additionally, we advanced beyond their research by implementing statistical techniques such as normalization [4], transformation, resampling, and causal inference. These methodologies have significantly enhanced both model performance and fairness, as evidenced in our comprehensive report [report-benchmark].
+Additionally, we advanced beyond their research by implementing statistical techniques such as normalization [4], transformation, resampling, and data augmentation (VAE and GAN). These methodologies have significantly enhanced both model performance and fairness, as evidenced in our comprehensive report [report-benchmark].
 
 Furthermore, we conducted in-depth analyses focusing on feature importance and causal inference, yielding interpretable machine learning insights. For more details, refer to [report-insight].
 
