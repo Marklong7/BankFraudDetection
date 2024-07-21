@@ -19,7 +19,7 @@ Building on the framework established by the KDD paper [3], which utilized Logis
 
 Additionally, we advanced beyond their research by implementing statistical techniques such as normalization [4], transformation, resampling, and data augmentation (VAE and GAN). These methodologies have significantly enhanced both model performance and fairness, as evidenced in our comprehensive report [report-benchmark].
 
-Furthermore, we conducted in-depth analyses focusing on feature importance and causal inference, yielding interpretable machine learning insights. For more details, refer to [report-insight].
+Furthermore, we conducted in-depth analyses focusing on feature importance and causal inference, yielding interpretable machine learning insights. For more details, refer to [report-insights].
 
 Finally, we trained federated learning versions of these models. In our previous non-federated learning setup, we only used one-third of the available data for training. However, in the federated learning training setting, we assume that we are collaborating with three companies. They shared their data to train a federated learning model, thereby granting us full access to the entire dataset. This collaborative approach provided us with access to a larger and more diverse dataset than previously possible, demonstrating the scalability and data-sharing advantages of federated learning in distributed settings. We will compare the performance of the two methods, check [report-federated-learning] for more detail.
 
