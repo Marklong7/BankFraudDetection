@@ -19,7 +19,7 @@ Building on the framework established by the KDD paper [3], which utilized Logis
 
 Additionally, we advanced beyond their research by implementing statistical techniques such as normalization [4], transformation, resampling, and data augmentation (VAE and GAN). These methodologies have significantly enhanced both model performance and fairness, as evidenced in our comprehensive report [report-benchmark]. Moreover, generative models like VAE and GAN offer the added benefit of better protecting the privacy of original data.
 
-Yotam Elor's large-scale experiments on 73 datasets [5] demonstrated that balancing could improve prediction performance for weak classifiers but not for the SOTA classifiers (lightGBM, XGBoost, Catboost). However, our preliminary experiments found that using balanced data can significantly improve the fairness score of the model, which is particularly important in this scenario.
+Yotam Elor's large-scale experiments on 73 datasets [5] demonstrated that balancing could improve prediction performance for weak classifiers but not for the SOTA classifiers (lightGBM, XGBoost, Catboost). However, our preliminary experiments found that using balanced data can significantly improve the fairness score of the model,  which is particularly important in the financial industry.
 
 Furthermore, we conducted in-depth analyses focusing on feature importance and causal inference, yielding interpretable machine learning insights. For more details, refer to [report-insights].
 
