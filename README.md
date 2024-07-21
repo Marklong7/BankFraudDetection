@@ -21,7 +21,7 @@ Additionally, we advanced beyond their research by implementing statistical tech
 
 Furthermore, we conducted in-depth analyses focusing on feature importance and causal inference, yielding interpretable machine learning insights. For more details, refer to [report-insight].
 
-Finally, we trained federated learning versions of these models. In our previous non-federated learning setup, we only used one-third of the available data for training. However, in federated learning training, we collaborated with three companies who shared their data to train a federated learning model, thereby granting us full access to the entire dataset. This collaborative approach provided us with access to a larger and more diverse dataset than previously possible, demonstrating the scalability and data-sharing advantages of federated learning in distributed settings. We will compare the performance of the two methods, check [report-federated-learning] for more detail.
+Finally, we trained federated learning versions of these models. In our previous non-federated learning setup, we only used one-third of the available data for training. However, in the federated learning training setting, we assume that we are collaborating with three companies. They shared their data to train a federated learning model, thereby granting us full access to the entire dataset. This collaborative approach provided us with access to a larger and more diverse dataset than previously possible, demonstrating the scalability and data-sharing advantages of federated learning in distributed settings. We will compare the performance of the two methods, check [report-federated-learning] for more detail.
 
 ## Contributors:
 *Jialong (Mark) Li, Zhitao Zeng, Shuting (Shannon) Fang, Yuhong Shao*
