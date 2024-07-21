@@ -15,7 +15,7 @@ We select the threshold in order to obtain 5% false positive rate (FPR), and mea
 We measure the ratio between FPRs, i.e., predictive equality [2]. The ratio is calculated by dividing the FPR of the group with lowest observed FPR with the FPR of the group with the highest FPR.
 
 ## Experiment & Models:
-Building on the framework established by the KDD paper [3], which utilized Logistic Regression (LR), XGBoost (XGB), LightGBM (LGBM), Random Forest (RF), and Feed Forward Neural Network (MLP), we excluded Decision Tree (as it usually perform poorly) and incorporated more advanced deep learning models.
+Building on the framework established by the KDD paper [3], which utilized Logistic Regression (LR), XGBoost (XGB), Random Forest (RF), and Feed Forward Neural Network (MLP), we excluded Decision Tree (as it usually perform poorly) and incorporated more advanced deep learning models.
 
 Additionally, we advanced beyond their research by implementing statistical techniques such as normalization [4], transformation, resampling, and causal inference. These methodologies have significantly enhanced both model performance and fairness, as evidenced in our comprehensive report [report-benchmark].
 
