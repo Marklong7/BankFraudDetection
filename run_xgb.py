@@ -51,7 +51,6 @@ def train_and_evaluate_xgboost(X: pd.DataFrame, y: pd.Series, X_val: pd.DataFram
     xgb_model.fit(X, y)
     
     y_train_pred = xgb_model.predict_proba(X)[:, 1]
-    train_auc = roc_auc_score(y, y_train_pred)
     
     y_val_pred = xgb_model.predict_proba(X_val)[:, 1]
     val_results = evaluate(y_val_pred, y_val, X=X_val)
@@ -60,7 +59,6 @@ def train_and_evaluate_xgboost(X: pd.DataFrame, y: pd.Series, X_val: pd.DataFram
     test_results = evaluate(y_test_pred, y_test, X=X_test)
     
     return {
-        'train_auc': train_auc,
         'val_results': val_results,
         'test_results': test_results
     }
@@ -147,37 +145,31 @@ Model results:
 
     !!!Best Model without re-sampling!!!
 Best parameters found:  {'colsample_bytree': 0.6, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 400, 'reg_alpha': 0.7, 'reg_lambda': 1, 'subsample': 0.9}
-Evaluation Results:  {'train_auc': 0.9206953696160034, 'val_results': [0.5209580838, 0.410855], 'test_results': [0.5731462926, 0.279965]}
+Evaluation Results:  {'val_results': [0.5209580838, 0.410855], 'test_results': [0.5731462926, 0.279965]}
 
     !!!Re-weight!!!
 Applying None sampling technique:
 Best parameters found:  {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 300, 'scale_pos_weight': 100}
-Evaluation Results:  {'train_auc': 0.9261283536630169, 'val_results': [0.5309381238, 0.90646], 'test_results': [0.5551102204, 0.865386]}
+Evaluation Results:  {'val_results': [0.5309381238, 0.90646], 'test_results': [0.5551102204, 0.865386]}
 
 Applying RandomOverSampler sampling technique:
 Best parameters found:  {'colsample_bytree': 1.0, 'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 400, 'reg_alpha': 0.7, 'subsample': 0.9}
-Evaluation Results:  {'train_auc': 0.9652418469217535, 'val_results': [0.49500998, 0.854023], 'test_results': [0.5130260521, 0.733977]}
+Evaluation Results:  {'val_results': [0.49500998, 0.854023], 'test_results': [0.5130260521, 0.733977]}
 
     !!!Best Model with re-sampling!!!
 Applying RandomUnderSampler sampling technique:
 Best parameters found:  {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 300, 'reg_alpha': 0.7, 'subsample': 0.9}
-Evaluation Results:  {'train_auc': 0.9501389258884331, 'val_results': [0.4930139721, 0.918649], 'test_results': [0.5170340681, 0.898675]}
+Evaluation Results:  {'val_results': [0.4930139721, 0.918649], 'test_results': [0.5170340681, 0.898675]}
 
 Applying SMOTE sampling technique:
 Best parameters found:  {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 400, 'reg_alpha': 0.7, 'subsample': 0.9}
-Evaluation Results:  {'train_auc': 0.9989708923658015, 'val_results': [0.4810379242, 0.513641], 'test_results': [0.5190380762, 0.371253]}
+Evaluation Results:  {'val_results': [0.4810379242, 0.513641], 'test_results': [0.5190380762, 0.371253]}
 
 Applying SVMSMOTE sampling technique:
 Best parameters found:  {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 400, 'reg_alpha': 0.5, 'subsample': 0.9}
-Evaluation Results:  {'train_auc': 0.9983936148780871, 'val_results': [0.5149700599, 0.447515], 'test_results': [0.5531062124, 0.345252]}
+Evaluation Results:  {'val_results': [0.5149700599, 0.447515], 'test_results': [0.5531062124, 0.345252]}
 '''
 
 '''
 Findings
-
 '''
-
-'''
-
-'''
-
