@@ -38,5 +38,7 @@ Illinois Risk Lab.
 
 > [4] Du, Z., et al. (2022, December). Rethinking normalization methods in federated learning. In Proceedings of the 3rd International Workshop on Distributed Machine Learning (pp. 16-22).
 
-> [5] Dong, P., et al. (2024). Privacy-Enhancing Collaborative Information Sharing through Federated Learning--A Case of the Insurance Industry. arXiv preprint arXiv:2402.14983.
+> [5] Elor, Y., & Averbuch-Elor, H. (2022). To SMOTE, or not to SMOTE?. arXiv preprint arXiv:2201.08528.
+
+> [6] Dong, P., et al. (2024). Privacy-Enhancing Collaborative Information Sharing through Federated Learning--A Case of the Insurance Industry. arXiv preprint arXiv:2402.14983.
 
