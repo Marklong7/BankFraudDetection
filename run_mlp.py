@@ -7,10 +7,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import roc_auc_score, roc_curve
 from torch.utils.data import DataLoader, TensorDataset
 from tqdm import tqdm
-from imblearn.over_sampling import SMOTE, RandomOverSampler
-from imblearn.under_sampling import RandomUnderSampler
-from imblearn.over_sampling import SVMSMOTE
-from typing import Tuple
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
@@ -126,7 +122,7 @@ def train_val_test(X_train_scaled: np.ndarray, y_train: np.ndarray, X_val_scaled
             print(f"New best model found at epoch {epoch+1}")
             best_val_loss = val_loss
             epochs_no_improve = 0
-            torch.save(model.state_dict(), 'best_model_resample.pth')
+            torch.save(model.state_dict(), 'best_model_drop.pth')
         else:
             epochs_no_improve += 1
             if epochs_no_improve == early_stop:
@@ -134,7 +130,7 @@ def train_val_test(X_train_scaled: np.ndarray, y_train: np.ndarray, X_val_scaled
                 break
     
     # Load best model
-    model.load_state_dict(torch.load('best_model_resample.pth'))
+    model.load_state_dict(torch.load('best_model_drop.pth'))
     
     # Validation
     model.eval()
@@ -195,32 +191,12 @@ def read_data():
     }
     return data
 
-def apply_sampling_technique(X: pd.DataFrame, y: pd.Series, technique: str) -> Tuple[pd.DataFrame, pd.Series]:
-    if technique == 'SMOTE':
-        sampler = SMOTE(random_state=42)
-    elif technique == 'RandomOverSampler':
-        sampler = RandomOverSampler(random_state=42)
-    elif technique == 'RandomUnderSampler':
-        sampler = RandomUnderSampler(random_state=42)
-    elif technique == 'SVMSMOTE':
-        sampler = SVMSMOTE(random_state=42)
-    else:
-        return X, y
-    
-    X_resampled, y_resampled = sampler.fit_resample(X, y)
-    return X_resampled, y_resampled
-
 # Main function
 def main():
     # Read data
     data = read_data()
     X_train, X_val, X_test = data['X_train'], data['X_val'], data['X_test']
     y_train, y_val, y_test = data['y_train'], data['y_val'], data['y_test']
-    
-    # Apply resampling technique if specified
-    resample = 'SVMSMOTE'  # Set this to 'SMOTE', 'RandomOverSampler', 'RandomUnderSampler', or 'SVMSMOTE' to apply resampling
-    if resample:
-        X_train, y_train = apply_sampling_technique(X_train, y_train, resample)
     
     scaler = StandardScaler()
     X_train_scaled = scaler.fit_transform(X_train)
@@ -249,7 +225,6 @@ def main():
     print("Hyperparameters:")
     for key, value in hyperparameters.items():
         print(f"  {key}: {value}")
-    print(f"  resample: {resample}")
     print("----------------------------------------------")
 
     # Print performance metrics
@@ -264,53 +239,9 @@ def main():
     print(f"  Predictive Equality: {test_equality:.4f}")
 
 if __name__ == "__main__":
-    main()
-    '''
-    Hyperparameters:
-  input_dim: 50
-  hidden_dim: 200
-  output_dim: 1
-  epochs: 50
-  batch_size: 2048
-  learning_rate: 0.0004
-  early_stop: 10
-  dropout_rate: 0.5
-  resample: SMOTE
-----------------------------------------------
-Validation Results:
-  AUC Score: 0.8798
-  True Positive Rate (TPR): 0.4950
-  Predictive Equality: 0.7382
-----------------------------------------------
-Testing Results:
-  AUC Score: 0.8819
-  True Positive Rate (TPR): 0.5210
-  Predictive Equality: 0.5340
-  '''
-    
+    main()   
+
 '''
-Hyperparameters:                                                                                                           
-  input_dim: 50
-  hidden_dim: 200
-  output_dim: 1
-  epochs: 50
-  batch_size: 2048
-  learning_rate: 0.0004
-  early_stop: 10
-  dropout_rate: 0.5
-  resample: RandomOverSampler
-----------------------------------------------
-Validation Results:
-  AUC Score: 0.8730
-  True Positive Rate (TPR): 0.4691
-  Predictive Equality: 0.8350
-----------------------------------------------
-Testing Results:
-  AUC Score: 0.8740
-  True Positive Rate (TPR): 0.4990
-  Predictive Equality: 0.5896
-
-
 Hyperparameters:
   input_dim: 50
   hidden_dim: 200
@@ -320,15 +251,14 @@ Hyperparameters:
   learning_rate: 0.0005
   early_stop: 10
   dropout_rate: 0.5
-  resample: RandomUnderSampler
 ----------------------------------------------
 Validation Results:
-  AUC Score: 0.8695
-  True Positive Rate (TPR): 0.4691
-  Predictive Equality: 0.9298
+  AUC Score: 0.8782
+  True Positive Rate (TPR): 0.4790
+  Predictive Equality: 0.3870
 ----------------------------------------------
 Testing Results:
   AUC Score: 0.8801
-  True Positive Rate (TPR): 0.4950
-  Predictive Equality: 0.8941
-  '''
+  True Positive Rate (TPR): 0.5230
+  Predictive Equality: 0.5544
+'''
