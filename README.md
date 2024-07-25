@@ -21,7 +21,7 @@ Additionally, we advanced beyond their research by implementing statistical tech
 
 Yotam Elor's large-scale experiments on 73 datasets [5] demonstrated that balancing could improve prediction performance for weak classifiers but not for the SOTA classifiers (lightGBM, XGBoost, Catboost). However, our preliminary experiments found that using balanced data can significantly improve the fairness score of the model,  which is particularly important in the financial industry.
 
-Furthermore, we conducted in-depth analyses focusing on feature importance and causal inference, yielding interpretable machine learning insights. For more details, refer to **[report-insights]**.
+Furthermore, we conducted in-depth analyses focusing on feature importance and causal inference, yielding interpretable machine learning insights. For more details, refer to **[report-analysis]**.
 
 Finally, we trained federated learning versions of these models. In our previous non-federated learning setup, we only used one-third of the available data for training. However, in the federated learning training setting, we assume that we are collaborating with three companies. They shared their data to train a federated learning model, thereby granting us full access to the entire dataset. This collaborative approach provided us with access to a larger and more diverse dataset than previously possible, demonstrating the scalability and data-sharing advantages of federated learning in distributed settings. We will compare the performance of the two methods, check **[report-federated-learning]** for more detail.
 
