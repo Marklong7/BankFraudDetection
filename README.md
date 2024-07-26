@@ -3,6 +3,8 @@
 ## Key Words:
 Fraud Detection, Privacy Preserving Machine Learning, Federated Learning, Fairness/bia Analysis.
 
+## Main Question Solved:
+
 ## The Dataset:
 The **Bank Account Fraud (BAF) dataset**, released by Jesus et al. [1] at NeurIPS 2022, is a large-scale, privacy-preserving suite of realistic tabular datasets. Feature Selection, Differential Privacy, and necessary Categorization are applied to ensure the dataset is both privacy-protected and realistic. Based on the noised dataset, the authors then use the CTGAN model to generate 2.5M instances and sample 1M of them to make the observed month distribution aligned to the original dataset. There are 30 features in the dataset, including sensitive features such as age and income.
 
