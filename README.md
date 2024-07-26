@@ -3,7 +3,13 @@
 ## Key Words:
 Fraud Detection, Privacy Preserving Machine Learning, Federated Learning, Fairness/bia Analysis.
 
-## Main Question Solved:
+## Main Question Addressed:
+
+1. How can we balance performance and fairness in machine learning models?
+
+2. Performance vs Fairness - Model result analysis: How do the feature importances and analysis results differ between a model that achieves the best performance but has low fairness and a model that offers a balanced performance with improved fairness?
+
+3. Effectiveness Comparison: How do various data resampling and balancing techniques (Random Sampler, SMOTE, SMOTESVM, VAE) compare in terms of achieving a balance between model performance and fairness?
 
 ## The Dataset:
 The **Bank Account Fraud (BAF) dataset**, released by Jesus et al. [1] at NeurIPS 2022, is a large-scale, privacy-preserving suite of realistic tabular datasets. Feature Selection, Differential Privacy, and necessary Categorization are applied to ensure the dataset is both privacy-protected and realistic. Based on the noised dataset, the authors then use the CTGAN model to generate 2.5M instances and sample 1M of them to make the observed month distribution aligned to the original dataset. There are 30 features in the dataset, including sensitive features such as age and income.
