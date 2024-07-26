@@ -5,6 +5,7 @@
 * Compared to re-sampling method (random over sampling, random under sampling, SMOTE, SMOTESVM, VAE), using balanced class weight always has decent performance and fairness score, and it's very easy to apply - start with re-sampling method each time you meet a imbalanced data.
 * The model with the best performance always has low predictive equality, the best practise of a model with a nice trade off between performance and fairness, is to find the best hyperparameter in terms of performance, then reduce the epoch/max_iter to make it underfit.
 * Generative Model like VAE shows great potential in this field. In this study, I simply use generative models to enrich the minority class  from 2% to 50%, and the performance of all non-parametric models are improved by including these data. In contrast, other methods like SMOTE and random sampler will be more likely to cause a reduce in model performance.
+* In addition, Generative Models can be used to generate minority group (not minority class) as well to improve the fairness performance.
 
   
 ### Logistics Only
