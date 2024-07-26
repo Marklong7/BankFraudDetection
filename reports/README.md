@@ -4,7 +4,7 @@
 * Re-balancing techniques can improve the model fairness score significantly, with little cost of model performance loss or even enhance the model performance - always use them when you have an imbalanced dataset.
 * Compared to re-sampling method (random over sampling, random under sampling, SMOTE, SMOTESVM, VAE), using balanced class weight always has decent performance and fairness score, and it's very easy to apply - start with re-sampling method each time you meet a imbalanced data.
 * The model with the best performance always has low predictive equality, the best practise of a model with a nice trade off between performance and fairness, is to find the best hyperparameter in terms of performance, then reduce the epoch/max_iter to make it underfit.
-* Generative Model like VAE shows great potential in this field. In this study, I simply use generative models to enrich the minority group from 2% to 50%, and the performance of all non-parametric models are improved by including these data. 
+* Generative Model like VAE shows great potential in this field. In this study, I simply use generative models to enrich the minority class  from 2% to 50%, and the performance of all non-parametric models are improved by including these data. 
   
 ### Logistics Only
 * For linear classifiers, log-transformation can improve both model performance and model fairness.
