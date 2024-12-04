@@ -15,7 +15,7 @@
 
 ### Non-parametric Models (RF, XGB, MLP)
 * Good oversampling methods can improve both model performance and fairness scores.
-* VAE outperforms other balancing methods in terms of performance but does not improve fairness.
+* VAE outperforms other balancing methods in terms of performance but does not improve fairness, this is likely due to the overfit of VAE.
 
 ### Final suggestions
 * Start with balanced class weights if you aim for a fair model.
